@@ -7,6 +7,9 @@
   "authors" : [ {
     "name" : "David Grudl",
     "email" : "david@grudl.com"
+  },{
+    "name" : "Jiří Ančinec",
+    "email" : "jirka@ancinec.cz"
   } ],
   "autoload" : {
     "files" : [ "VisualPaginator.php" ]
