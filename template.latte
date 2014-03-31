@@ -1,30 +1,27 @@
 {*
- * @version    $Id: template.phtml 2 2009-07-13 20:58:52Z david@grudl.com $
  * @param Paginator $paginator
  * @param array     $steps
  *}
 
-{if $paginator->pageCount > 1}
-<div class="paginator">
+<ul n:if="$paginator->pageCount > 1" class="pagination">
 	{if $paginator->isFirst()}
-	<span class="button">Â« Previous</span>
+	<li class="disabled"><a>«</a></li>
 	{else}
-	<a href="{link this, 'page' => $paginator->page - 1}">Â« Previous</a>
+	<li><a href="{link this, 'page' => $paginator->page - 1}" rel="prev">«</a><li>
 	{/if}
-
+	
 	{foreach $steps as $step}
 	{if $step == $paginator->page}
-		<span class="current">{$step}</span>
+		<li class="active"><a href="#">{$step}</a></li>
 	{else}
-		<a href="{link this, 'page' => $step}">{$step}</a>
+		<li><a href="{link this, 'page' => $step}">{$step}</a></li>
 	{/if}
-	{if $iterator->nextValue > $step + 1}<span>â€¦</span>{/if}
+	{if $iterator->nextValue > $step + 1}<li class="disabled"><a>…</a></li>{/if}
 	{/foreach}
-
+	
 	{if $paginator->isLast()}
-	<span class="button">Next Â»</span>
+    	<li class="disabled"><a >»</a></li>
 	{else}
-	<a href="{link this, 'page' => $paginator->page + 1}">Next Â»</a>
+		<li><a href="{link this, 'page' => $paginator->page + 1}" rel="next">»</a></li>
 	{/if}
-</div>
-{/if}
+</ul>
