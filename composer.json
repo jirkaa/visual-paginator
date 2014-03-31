@@ -1,0 +1,27 @@
+{
+  "name" : "jirkaa/visual-paginator ",
+  "description" : "Visual paginator",
+  "version" : "0.9",
+  "require" : {
+    "nette/nette" : "~2.0"
+  },
+  "authors" : [ {
+    "name" : "David Grudl",
+    "email" : "david@grudl.com"
+  } ],
+  "keywords" : [ "nette", "paginator" ],
+  "extra" : {
+    "nette" : {
+      "assets" : { },
+      "assets-optional" : {
+        "css" : [ "example.css" ]
+      }
+    }
+  },
+  "autoload" : {
+    "classmap" : [ "VisualPaginator.php" ]
+  },
+  "type" : "nette-addon",
+  "license" : "New BSD License",
+  "homepage" : "http://addons.nette.org/cs/visualpaginator"
+}
