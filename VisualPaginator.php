@@ -14,9 +14,9 @@
  * @version    $Id: VisualPaginator.php 4 2009-07-14 15:22:02Z david@grudl.com $
  */
 
-/*use Nette\Application\Control;*/
+use Nette\Application\UI\Control;
 
-/*use Nette\Paginator;*/
+use Nette\Utils\Paginator;
 
 
 
@@ -74,7 +74,7 @@ class VisualPaginator extends Control
 
 		$this->template->steps = $steps;
 		$this->template->paginator = $paginator;
-		$this->template->setFile(dirname(__FILE__) . '/template.phtml');
+		$this->template->setFile(dirname(__FILE__) . '/template.latte');
 		$this->template->render();
 	}
 
