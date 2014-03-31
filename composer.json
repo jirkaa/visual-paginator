@@ -1,5 +1,5 @@
 {
-  "name" : "jirkaa/visual-paginator ",
+  "name" : "jirkaa/visual-paginator",
   "description" : "Visual paginator",
   "version" : "0.9",
   "require" : {
@@ -21,7 +21,7 @@
   "autoload" : {
     "classmap" : [ "VisualPaginator.php" ]
   },
-  "type" : "nette-addon",
   "license" : "New BSD License",
+  "type" : "nette-addon",
   "homepage" : "http://addons.nette.org/cs/visualpaginator"
 }
