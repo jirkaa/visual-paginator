@@ -5,9 +5,9 @@
 
 <ul n:if="$paginator->pageCount > 1" class="pagination">
 	{if $paginator->isFirst()}
-	<li class="disabled"><a>«</a></li>
+	<li class="disabled"><a>Â«</a></li>
 	{else}
-	<li><a href="{link this, 'page' => $paginator->page - 1}" rel="prev">«</a><li>
+	<li><a href="{link this, 'page' => $paginator->page - 1}" rel="prev">Â«</a><li>
 	{/if}
 	
 	{foreach $steps as $step}
@@ -16,12 +16,12 @@
 	{else}
 		<li><a href="{link this, 'page' => $step}">{$step}</a></li>
 	{/if}
-	{if $iterator->nextValue > $step + 1}<li class="disabled"><a>…</a></li>{/if}
+	{if $iterator->nextValue > $step + 1}<li class="disabled"><a>â€¦</a></li>{/if}
 	{/foreach}
 	
 	{if $paginator->isLast()}
-    	<li class="disabled"><a >»</a></li>
+    	<li class="disabled"><a >Â»</a></li>
 	{else}
-		<li><a href="{link this, 'page' => $paginator->page + 1}" rel="next">»</a></li>
+		<li><a href="{link this, 'page' => $paginator->page + 1}" rel="next">Â»</a></li>
 	{/if}
 </ul>
